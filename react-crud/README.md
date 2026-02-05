@@ -1,18 +1,47 @@
-# React + Vite
+# React CRUD User Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React-based CRUD (Create, Read, Update, Delete) application for managing user data.  
+The app uses **JSON Server as a mock backend** and follows a **schema-driven architecture** so new fields can be added with minimal changes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+- React (Vite)
+- React Hook Form (form handling & validation)
+- Material UI (UI components)
+- Axios (API calls)
+- JSON Server (mock REST API)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## ⚙️ Setup Instructions
 
-## Expanding the ESLint configuration
+### 1. Clone the repository
+```bash
+git clone <"https://github.com/pratikshanalawade/React-crud-user-management.git">
+cd react-crud
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#Install dependencies
+npm install
+
+
+#Start JSON Server (Mock API)
+json-server --watch db.json --port 3001
+
+##Start the React app
+npm run dev
+
+#Open the app in your browser at:
+http://localhost:5173
+
+### Add New Fields to the Form
+## Step 1: Open db.json
+
+##Locate the userSchema array.
+{
+  "name": "dob",
+  "label": "Date of Birth",
+  "type": "date",
+  "required": false
+}
